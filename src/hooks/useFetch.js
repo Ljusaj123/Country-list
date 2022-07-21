@@ -5,7 +5,6 @@ const useFetch = (url) => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
   const [error, setError] = useState({ isError: false, message: "" });
-  console.log("aaaaa");
 
   useEffect(() => {
     const fetchData = async () => {
