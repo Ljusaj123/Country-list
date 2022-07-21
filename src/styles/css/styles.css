@@ -13,15 +13,21 @@ body {
   color: hsl(200deg, 15%, 8%);
 }
 
+h1 {
+  font-size: clamp(1.3rem, 5.5vw, 2.7rem);
+  margin: 1.2rem 0;
+  line-height: 1.3;
+}
+
 h2 {
-  font-size: clamp(1.5rem, 5.5vw, 2.7rem);
-  margin: 1.5rem 0;
+  font-size: clamp(1.1rem, 5.5vw, 2.1rem);
+  margin: 1rem 0;
   line-height: 1.3;
 }
 
 h3 {
   font-size: clamp(1rem, 2vw, 1.4rem);
-  margin: 1.2rem 0;
+  margin: 0.8rem 0;
   line-height: 1.3;
 }
 
@@ -37,4 +43,39 @@ a {
 li {
   list-style: none;
   font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+}
+
+.header {
+  width: 100vw;
+  -webkit-box-shadow: 10px 0 10px rgba(0, 0, 0, 0.7);
+          box-shadow: 10px 0 10px rgba(0, 0, 0, 0.7);
+  padding: 0.5rem 1.5rem;
+}
+.header-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header-container .mode-colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.header-container .mode-colors svg {
+  margin-right: 0.5rem;
 }
