@@ -1,0 +1,22 @@
+@use "../base/" as *;
+
+.card {
+  max-width: 350px;
+  @include universal-flex-display(center, center);
+  flex-direction: column;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 3rem;
+  justify-self: center;
+
+  img {
+    width: 100%;
+  }
+
+  .country-info {
+    width: 100%;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    @include universal-flex-display(center, flex-start);
+    flex-direction: column;
+  }
+}
