@@ -1,15 +1,17 @@
 import React from "react";
 import Card from "../components/Card";
 import useFetch from "../hooks/useFetch";
+import DataContext from "../contexts/DataContext";
+import { useContext } from "react";
 
 import { DoubleBubble } from "react-spinner-animated";
 
 import "react-spinner-animated/dist/index.css";
 
 function CountryList() {
-  const { data, loading, error } = useFetch(
-    "https://restcountries.com/v3.1/region/oceania"
-  );
+  const { url } = useContext(DataContext);
+  const { data, loading, error } = useFetch(url);
+  console.log(data);
 
   if (loading) {
     return (
