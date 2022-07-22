@@ -6,7 +6,6 @@ import DataContext from "./contexts/DataContext";
 import { useState } from "react";
 function App() {
   const [url, setUrl] = useState("https://restcountries.com/v3.1/all");
-  console.log(url);
 
   return (
     <div className="App">

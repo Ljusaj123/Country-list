@@ -11,7 +11,6 @@ import "react-spinner-animated/dist/index.css";
 function CountryList() {
   const { url } = useContext(DataContext);
   const { data, loading, error } = useFetch(url);
-  console.log(data);
 
   if (loading) {
     return (
