@@ -1,6 +1,14 @@
+@use "../base/" as *;
+
 .country-list {
   padding: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 2rem;
+
+  a {
+    text-decoration: none;
+    color: $very-dark-blue__lignt-mode;
+    cursor: pointer;
+  }
 }
