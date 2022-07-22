@@ -3,6 +3,7 @@ import Card from "../components/Card";
 import useFetch from "../hooks/useFetch";
 import DataContext from "../contexts/DataContext";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import { DoubleBubble } from "react-spinner-animated";
 
@@ -29,7 +30,11 @@ function CountryList() {
   return (
     <div className="country-list">
       {data.map((country, index) => {
-        return <Card key={index} props={country} />;
+        return (
+          <Link to={`/country/${country.name.common}`} key={index}>
+            <Card props={country} />
+          </Link>
+        );
       })}
     </div>
   );
