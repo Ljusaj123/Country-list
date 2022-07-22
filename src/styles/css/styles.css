@@ -124,6 +124,8 @@ li {
   border: none;
   outline: none;
   padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 512px) {
