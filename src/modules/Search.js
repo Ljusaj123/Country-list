@@ -8,12 +8,24 @@ function Search() {
 
   const handleClick = (value) => {
     setUrl(`https://restcountries.com/v3.1/region/${value}`);
-    console.log("aaaa");
+  };
+
+  const handleInput = (query) => {
+    if (!query) {
+      setUrl("https://restcountries.com/v3.1/all");
+    } else {
+      setUrl(`https://restcountries.com/v3.1/name/${query}`);
+    }
   };
   return (
     <div className="search-filter">
       <div className="search-filter-container">
-        <input type="text" id="input" placeholder="Search for a country..." />
+        <input
+          type="text"
+          id="input"
+          placeholder="Search for a country..."
+          onChange={(e) => handleInput(e.target.value)}
+        />
 
         <div className="select">
           <select
