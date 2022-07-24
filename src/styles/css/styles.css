@@ -164,7 +164,7 @@ li {
 .country {
   background-color: hsl(0deg, 0%, 98%);
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
 }
 .country-container {
   height: 100%;
@@ -183,8 +183,36 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-.country-container .country-info__flag {
+.country-container .country-info .button-container {
+  width: 100%;
+  height: 20%;
+  padding-top: 2rem;
+}
+.country-container .country-info .button-container a .back-button {
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(0deg, 0%, 98%);
+  -webkit-box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.country-container .country-info-container {
+  height: 20%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.country-container .country-info-container .country-info__flag {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -201,23 +229,10 @@ li {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.country-container .country-info__flag .button-container {
-  margin-bottom: 7rem;
-  width: 100%;
-}
-.country-container .country-info__flag .button-container a .back-button {
-  padding: 1rem 3rem;
-  border: none;
-  border-radius: 5px;
-  background-color: hsl(0deg, 0%, 98%);
-  -webkit-box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.3);
-          box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-}
-.country-container .country-info__flag img {
+.country-container .country-info-container .country-info__flag img {
   width: clamp(300px, 90%, 700px);
 }
-.country-container .country-info__text {
+.country-container .country-info-container .country-info__text {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -229,8 +244,12 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-.country-container .country-info__text-container {
+.country-container .country-info-container .country-info__text-container {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -250,7 +269,7 @@ li {
           flex-direction: column;
   min-height: 70%;
 }
-.country-container .country-info__text-container .country-text {
+.country-container .country-info-container .country-info__text-container .country-text {
   width: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -269,16 +288,16 @@ li {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.country-container .country-info__text-container .country-text .name {
+.country-container .country-info-container .country-info__text-container .country-text .name {
   margin-bottom: 1rem;
 }
-.country-container .country-info__text-container .country-text .info {
+.country-container .country-info-container .country-info__text-container .country-text .info {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
-.country-container .country-info__text-container .country-borders {
+.country-container .country-info-container .country-info__text-container .country-borders {
   width: 100%;
   margin-top: 4rem;
   display: -webkit-box;
@@ -291,13 +310,13 @@ li {
       -ms-flex-align: center;
           align-items: center;
 }
-.country-container .country-info__text-container .country-borders .border-buttons {
+.country-container .country-info-container .country-info__text-container .country-borders .border-buttons {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   gap: 1rem;
 }
-.country-container .country-info__text-container .country-borders .border-buttons a button {
+.country-container .country-info-container .country-info__text-container .country-borders .border-buttons a button {
   width: 100%;
   padding: 0.5rem 0;
   border: none;
@@ -314,32 +333,35 @@ li {
     height: -moz-fit-content;
     height: fit-content;
   }
-  .country-container .country-info {
+  .country-container .country-info .button-container {
+    margin-bottom: 3rem;
+  }
+  .country-container .country-info-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .country-container .country-info__flag {
+  .country-container .country-info-container .country-info__flag {
     margin-bottom: 3rem;
   }
-  .country-container .country-info__flag img {
+  .country-container .country-info-container .country-info__flag img {
     -ms-flex-item-align: center;
         align-self: center;
   }
-  .country-container .country-info__text-container .country-text {
+  .country-container .country-info-container .country-info__text-container .country-text {
     padding: 1rem;
   }
-  .country-container .country-info__text-container .country-text .info {
+  .country-container .country-info-container .country-info__text-container .country-text .info {
     grid-template-columns: 1fr;
   }
-  .country-container .country-info__text-container .country-borders {
+  .country-container .country-info-container .country-info__text-container .country-borders {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .country-container .country-info__text-container .country-borders .border-buttons {
+  .country-container .country-info-container .country-info__text-container .country-borders .border-buttons {
     margin-top: 1rem;
   }
 }
