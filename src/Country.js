@@ -89,7 +89,9 @@ function Country() {
                       </p>
                       <p>
                         <b>Top Level Domain: </b>
-                        {tld}
+                        {tld.map((t) => {
+                          return `${t}, `;
+                        })}
                       </p>
                       <p>
                         <b>Currencies: </b>
@@ -112,7 +114,11 @@ function Country() {
                     <div className="border-buttons">
                       {borders
                         ? borders.map((border, index) => {
-                            return <button key={index}>{border}</button>;
+                            return (
+                              <Link to={`/country/${border}`}>
+                                <button key={index}>{border}</button>
+                              </Link>
+                            );
                           })
                         : "None"}
                     </div>
