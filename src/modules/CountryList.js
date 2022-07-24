@@ -31,7 +31,7 @@ function CountryList() {
     <div className="country-list">
       {data.map((country, index) => {
         return (
-          <Link to={`/country/${country.name.common}`} key={index}>
+          <Link to={`/country/${country.cca3}`} key={index}>
             <Card props={country} />
           </Link>
         );

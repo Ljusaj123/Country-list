@@ -7,7 +7,7 @@ function Search() {
   const { setUrl } = useContext(DataContext);
 
   const handleClick = (value) => {
-    setUrl(`https://restcountries.com/v3.1/region/${value}`);
+    setUrl(`https://restcountries.com/v3.1/region/${value}?fullText=true`);
   };
 
   const handleInput = (query) => {
