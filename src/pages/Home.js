@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Header from "../modules/Header";
-import DataContext from "../contexts/DataContext";
 import Search from "../modules/Search";
 import CountryList from "../modules/CountryList";
 
@@ -9,11 +8,8 @@ function Home() {
   return (
     <>
       <Header />
-
-      <DataContext.Provider value={{ url, setUrl }}>
-        <Search />
-        <CountryList />
-      </DataContext.Provider>
+      <Search setUrl={setUrl} />
+      <CountryList url={url} />
     </>
   );
 }

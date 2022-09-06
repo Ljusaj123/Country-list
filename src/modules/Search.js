@@ -1,10 +1,6 @@
-import React, { useContext } from "react";
 import { regionList } from "../const/RegionList.js";
-import DataContext from "../contexts/DataContext";
 
-function Search() {
-  const { setUrl } = useContext(DataContext);
-
+function Search({ setUrl }) {
   const handleClick = (value) => {
     setUrl(`https://restcountries.com/v3.1/region/${value}?fullText=true`);
   };
