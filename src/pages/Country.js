@@ -1,8 +1,8 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import useFetch from "./hooks/useFetch";
+import useFetch from "../hooks/useFetch";
 import { DoubleBubble } from "react-spinner-animated";
-import Header from "./modules/Header";
+import Header from "../modules/Header";
 import "react-spinner-animated/dist/index.css";
 
 function Country() {

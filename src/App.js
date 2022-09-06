@@ -1,20 +1,15 @@
-import "./styles/css/styles.css";
-import Header from "./modules/Header";
-import Search from "./modules/Search";
-import CountryList from "./modules/CountryList";
-import DataContext from "./contexts/DataContext";
-import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Country from "./pages/Country";
+import Home from "./pages/Home";
 function App() {
-  const [url, setUrl] = useState("https://restcountries.com/v3.1/all");
-
   return (
     <div className="App">
-      <Header />
-
-      <DataContext.Provider value={{ url, setUrl }}>
-        <Search />
-        <CountryList />
-      </DataContext.Provider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/countries/:id" element={<Country />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
