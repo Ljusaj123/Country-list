@@ -6,7 +6,9 @@ function Search({ setUrl }) {
   };
 
   const handleInput = (query) => {
-    if (query) {
+    if (!query) {
+      setUrl("https://restcountries.com/v3.1/all");
+    } else {
       setUrl(`https://restcountries.com/v3.1/name/${query}`);
     }
   };
