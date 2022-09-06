@@ -19,7 +19,7 @@ function CountryList({ url }) {
     );
   }
   if (error.isError) {
-    return <p>{error.message}</p>;
+    return <p className="container">{error.message}</p>;
   }
 
   return (
