@@ -14,8 +14,8 @@
     @content;
   }
 }
-@mixin media-512 {
-  @media screen and (max-width: 512px) {
+@mixin media-600 {
+  @media screen and (max-width: 600px) {
     @content;
   }
 }
