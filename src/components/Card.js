@@ -8,13 +8,13 @@ const Card = ({ props }) => {
       <div className="country-info">
         <h3>{name.common}</h3>
         <p>
-          <b>Population:</b> {population}
+          <strong>Population:</strong> {population}
         </p>
         <p>
-          <b>Region:</b> {region}
+          <strong>Region:</strong> {region}
         </p>
         <p>
-          <b>Capital:</b> {capital}
+          <strong>Capital:</strong> {capital}
         </p>
       </div>
     </div>
