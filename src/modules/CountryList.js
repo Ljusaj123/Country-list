@@ -1,16 +1,11 @@
-import React from "react";
 import Card from "../components/Card";
 import useFetch from "../hooks/useFetch";
-import DataContext from "../contexts/DataContext";
-import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import { DoubleBubble } from "react-spinner-animated";
-
 import "react-spinner-animated/dist/index.css";
 
-function CountryList() {
-  const { url } = useContext(DataContext);
+function CountryList({ url }) {
   const { data, loading, error } = useFetch(url);
 
   if (loading) {
@@ -28,10 +23,10 @@ function CountryList() {
   }
 
   return (
-    <div className="country-list">
+    <div className="country-list container">
       {data.map((country, index) => {
         return (
-          <Link to={`/country/${country.cca3}`} key={index}>
+          <Link to={`/countries/${country.cca3}`} key={index}>
             <Card props={country} />
           </Link>
         );
