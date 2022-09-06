@@ -15,7 +15,14 @@ const useFetch = (url) => {
         setData(data);
         setError({ isError: false, message: "" });
       } catch (error) {
-        setError({ isError: true, message: "Something went wrong" });
+        if (error.response.data.status === 404) {
+          setError({
+            isError: true,
+            message: "There is no country for inserted data",
+          });
+        } else {
+          setError({ isError: true, message: error.message });
+        }
       } finally {
         setLoading(false);
       }
