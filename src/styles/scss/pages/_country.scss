@@ -1,7 +1,6 @@
 @use "../base/" as *;
 
 .country {
-  background-color: $very-light-gray__light-mode;
   min-height: 100vh;
 
   &__info {
@@ -76,13 +75,9 @@ button {
   box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.3);
   padding: 1em 3em;
   cursor: pointer;
-  background-color: $very-light-gray__light-mode;
   transition: all 0.5s ease;
   font-size: $fs--placeholder;
 
-  &:hover {
-    background-color: $white;
-  }
   &:active {
     transform: scale(0.9);
   }
