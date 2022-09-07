@@ -60,10 +60,61 @@ img {
   margin: 0 auto;
 }
 
+.light-mode .main-background {
+  background-color: hsl(0deg, 0%, 98%);
+}
+.light-mode .secondary-background {
+  background-color: hsl(0deg, 0%, 100%);
+}
+.light-mode .text {
+  color: hsl(200deg, 15%, 8%);
+}
+.light-mode .text::-webkit-input-placeholder {
+  color: hsl(0deg, 0%, 52%);
+}
+.light-mode .text::-moz-placeholder {
+  color: hsl(0deg, 0%, 52%);
+}
+.light-mode .text:-ms-input-placeholder {
+  color: hsl(0deg, 0%, 52%);
+}
+.light-mode .text::-ms-input-placeholder {
+  color: hsl(0deg, 0%, 52%);
+}
+.light-mode .text::placeholder {
+  color: hsl(0deg, 0%, 52%);
+}
+
+.dark-mode {
+  color: hsl(0deg, 0%, 98%);
+}
+.dark-mode .main-background {
+  background-color: hsl(207deg, 26%, 17%);
+}
+.dark-mode .secondary-background {
+  background-color: hsl(209deg, 23%, 22%);
+}
+.dark-mode .text::-webkit-input-placeholder {
+  color: hsl(0deg, 0%, 100%);
+}
+.dark-mode .text::-moz-placeholder {
+  color: hsl(0deg, 0%, 100%);
+}
+.dark-mode .text:-ms-input-placeholder {
+  color: hsl(0deg, 0%, 100%);
+}
+.dark-mode .text::-ms-input-placeholder {
+  color: hsl(0deg, 0%, 100%);
+}
+.dark-mode .text,
+.dark-mode .text::placeholder {
+  color: hsl(0deg, 0%, 100%);
+}
+
 .header {
-  -webkit-box-shadow: 10px 0 10px rgba(0, 0, 0, 0.7);
-          box-shadow: 10px 0 10px rgba(0, 0, 0, 0.7);
   padding: 0.5em 0;
+  -webkit-box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.2);
 }
 .header__container {
   display: -webkit-box;
@@ -106,6 +157,10 @@ img {
       -ms-flex-align: start;
           align-items: flex-start;
   color: inherit;
+}
+
+.country-error {
+  min-height: 70vh;
 }
 
 .search-filter {
@@ -195,6 +250,7 @@ img {
 
 .country {
   background-color: hsl(0deg, 0%, 98%);
+  min-height: 100vh;
 }
 .country__info {
   display: -webkit-box;
@@ -231,9 +287,9 @@ img {
   width: 100%;
 }
 .country__info-text {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -354,5 +410,8 @@ button:active {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .country-text .info {
+    grid-template-columns: 1fr;
   }
 }

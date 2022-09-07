@@ -26,7 +26,7 @@
     }
 
     &-text {
-      flex: 2;
+      flex: 1;
       @include universal-flex-display(center, center);
       flex-direction: column;
       gap: 2em;
@@ -104,6 +104,12 @@ button {
     }
     .country-borders {
       flex-direction: column;
+    }
+
+    &-text {
+      .info {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }
