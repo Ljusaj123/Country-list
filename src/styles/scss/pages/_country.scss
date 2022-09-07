@@ -9,18 +9,6 @@
     padding: 2em 0;
     gap: 10em;
 
-    .back-button {
-      padding: 1rem 3rem;
-      border: none;
-      border-radius: 5px;
-      background-color: $very-light-gray__light-mode;
-      box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.3);
-      cursor: pointer;
-      align-self: flex-start;
-      justify-self: flex-start;
-      font-size: $fs--placeholder;
-    }
-
     &-container {
       display: flex;
       width: 100%;
@@ -69,24 +57,38 @@
   &-borders {
     width: 100%;
     @include universal-flex-display(flex-start, center);
+    gap: 1em;
 
-    .border-buttons {
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-      gap: 1rem;
-
-      button {
-        width: 100%;
-        padding: 0.5rem 0;
-        border: none;
-        border-radius: 5px;
-        background-color: $very-light-gray__light-mode;
-        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-        cursor: pointer;
-      }
+    .border-buttons__container {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      @include universal-flex-display(center, center);
+      gap: 1em;
     }
   }
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.3);
+  padding: 1em 3em;
+  cursor: pointer;
+  background-color: $very-light-gray__light-mode;
+  transition: all 0.5s ease;
+  font-size: $fs--placeholder;
+
+  &:hover {
+    background-color: $white;
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.border-button {
+  padding: 1em 2em;
 }
 
 @include media-1024 {
@@ -95,25 +97,12 @@
 
     &__info {
       gap: 2em;
-      .back-button {
-        margin-bottom: 3rem;
-      }
       &-container {
         flex-direction: column;
-      }
-      &-flag {
-        margin-bottom: 3rem;
-        & > img {
-          align-self: center;
-        }
       }
     }
     .country-borders {
       flex-direction: column;
-
-      .border-buttons {
-        margin-top: 1rem;
-      }
     }
   }
 }

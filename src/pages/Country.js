@@ -107,12 +107,14 @@ function Country() {
                   <p>
                     <b>Border Countries: </b>
                   </p>
-                  <div className="border-buttons">
+                  <div className="border-buttons__container">
                     {borders
                       ? borders.map((border, index) => {
                           return (
                             <Link to={`/countries/${border}`}>
-                              <button key={index}>{border}</button>
+                              <button className="border-button" key={index}>
+                                {border}
+                              </button>
                             </Link>
                           );
                         })
