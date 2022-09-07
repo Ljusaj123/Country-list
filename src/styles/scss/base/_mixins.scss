@@ -3,12 +3,6 @@
   justify-content: $justify;
   align-items: $align;
 }
-
-@mixin media-768 {
-  @media screen and (max-width: 768px) {
-    @content;
-  }
-}
 @mixin media-1024 {
   @media screen and (max-width: 1024px) {
     @content;
