@@ -28,109 +28,101 @@ function Country() {
 
   return (
     <div className="country">
-      {console.log(data)}
       <Header />
-      <div className="country-container">
-        {data.map((d, index) => {
-          const {
-            flags,
-            name,
-            population,
-            region,
-            subregion,
-            capital,
-            currencies,
-            languages,
-            tld,
-            borders,
-          } = d;
 
-          const curren = Object.keys(currencies);
-          console.log(curren);
+      {data.map((d, index) => {
+        const {
+          flags,
+          name,
+          population,
+          region,
+          subregion,
+          capital,
+          currencies,
+          languages,
+          tld,
+          borders,
+        } = d;
 
-          const lang = Object.values(languages);
+        const curren = Object.keys(currencies);
+        console.log(curren);
 
-          return (
-            <div className="country-info" key={index}>
-              <div className="button-container">
-                <Link to={"/"}>
-                  <button className="back-button">Back</button>
-                </Link>
+        const lang = Object.values(languages);
+
+        return (
+          <div className="country__info container" key={index}>
+            <Link to={"/"}>
+              <button className="back-button">Back</button>
+            </Link>
+            <div className="country__info-container">
+              <div className="country__info-flag">
+                <img src={flags.png} alt="" />
               </div>
-              <div className="country-info-container">
-                <div className="country-info__flag">
-                  <img src={flags.png} alt="" />
+              <div className="country__info-text">
+                <div className="country-text">
+                  <h2 className="name">{name.common}</h2>
+                  <div className="info">
+                    <p>
+                      <strong>Official Name: </strong>
+                      {name.official}
+                    </p>
+                    <p>
+                      <strong>Population: </strong>
+                      {population}
+                    </p>
+                    <p>
+                      <strong>Region: </strong>
+                      {region}
+                    </p>
+                    <p>
+                      <strong>Sub region: </strong>
+                      {subregion || "None"}
+                    </p>
+                    <p>
+                      <strong>Capital: </strong>
+                      {capital}
+                    </p>
+                    <p>
+                      <strong>Top Level Domain: </strong>
+                      {tld.map((t) => {
+                        return `${t}, `;
+                      })}
+                    </p>
+                    <p>
+                      <strong>Currencies: </strong>
+                      {curren.map((curr) => {
+                        return curr;
+                      })}
+                    </p>
+                    <p>
+                      <strong>Languages: </strong>
+                      {lang.map((lag) => {
+                        return `${lag}, `;
+                      })}
+                    </p>
+                  </div>
                 </div>
-                <div className="country-info__text">
-                  <div className="country-info__text-container">
-                    <div className="country-text">
-                      <div className="name">
-                        <h2>{name.common}</h2>
-                      </div>
-                      <div className="info">
-                        <p>
-                          <b>Official Name: </b>
-                          {name.official}
-                        </p>
-                        <p>
-                          <b>Population: </b>
-                          {population}
-                        </p>
-                        <p>
-                          <b>Region: </b>
-                          {region}
-                        </p>
-                        <p>
-                          <b>Sub region: </b>
-                          {subregion || "None"}
-                        </p>
-                        <p>
-                          <b>Capital: </b>
-                          {capital}
-                        </p>
-                        <p>
-                          <b>Top Level Domain: </b>
-                          {tld.map((t) => {
-                            return `${t}, `;
-                          })}
-                        </p>
-                        <p>
-                          <b>Currencies: </b>
-                          {curren.map((curr) => {
-                            return curr;
-                          })}
-                        </p>
-                        <p>
-                          <b>Languages: </b>
-                          {lang.map((lag) => {
-                            return `${lag}, `;
-                          })}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="country-borders">
-                      <p>
-                        <b>Border Countries: </b>
-                      </p>
-                      <div className="border-buttons">
-                        {borders
-                          ? borders.map((border, index) => {
-                              return (
-                                <Link to={`/country/${border}`}>
-                                  <button key={index}>{border}</button>
-                                </Link>
-                              );
-                            })
-                          : "None"}
-                      </div>
-                    </div>
+                <div className="country-borders">
+                  <p>
+                    <b>Border Countries: </b>
+                  </p>
+                  <div className="border-buttons">
+                    {borders
+                      ? borders.map((border, index) => {
+                          return (
+                            <Link to={`/countries/${border}`}>
+                              <button key={index}>{border}</button>
+                            </Link>
+                          );
+                        })
+                      : "None"}
                   </div>
                 </div>
               </div>
             </div>
-          );
-        })}
-      </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
