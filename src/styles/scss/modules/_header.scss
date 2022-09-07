@@ -1,8 +1,8 @@
 @use "../base/" as *;
 
 .header {
-  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.7);
   padding: 0.5em 0;
+  box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.2);
 
   &__container {
     @include universal-flex-display(space-between, center);

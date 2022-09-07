@@ -2,6 +2,7 @@
 
 .country {
   background-color: $very-light-gray__light-mode;
+  min-height: 100vh;
 
   &__info {
     @include universal-flex-display(center, flex-start);
