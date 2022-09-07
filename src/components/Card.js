@@ -3,7 +3,7 @@ import React from "react";
 const Card = ({ props }) => {
   const { capital, region, population, name, flags } = props;
   return (
-    <div className="card">
+    <div className="card secondary-background">
       <img src={flags.png} alt="" />
       <div className="country-info">
         <h3>{name.common}</h3>

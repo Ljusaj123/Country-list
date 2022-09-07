@@ -5,7 +5,7 @@ import { DoubleBubble } from "react-spinner-animated";
 import Header from "../modules/Header";
 import "react-spinner-animated/dist/index.css";
 
-function Country() {
+function Country({ mode, setMode }) {
   const { id } = useParams();
   const { data, loading, error } = useFetch(
     `https://restcountries.com/v3.1/alpha/${id}`
@@ -27,8 +27,8 @@ function Country() {
   }
 
   return (
-    <div className="country">
-      <Header />
+    <div className="country main-background">
+      <Header mode={mode} setMode={setMode} />
 
       {data.map((d, index) => {
         const {
@@ -52,7 +52,9 @@ function Country() {
         return (
           <div className="country__info container" key={index}>
             <Link to={"/"}>
-              <button className="back-button">Back</button>
+              <button className="back-button secondary-background text">
+                Back
+              </button>
             </Link>
             <div className="country__info-container">
               <div className="country__info-flag">
@@ -112,7 +114,10 @@ function Country() {
                       ? borders.map((border, index) => {
                           return (
                             <Link to={`/countries/${border}`}>
-                              <button className="border-button" key={index}>
+                              <button
+                                className="border-button secondary-background text"
+                                key={index}
+                              >
                                 {border}
                               </button>
                             </Link>

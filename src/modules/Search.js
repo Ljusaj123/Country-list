@@ -13,18 +13,18 @@ function Search({ setUrl }) {
     }
   };
   return (
-    <div className="search-filter">
+    <div className="search-filter main-background">
       <div className="search-filter__container container">
         <input
           type="text"
-          className="search__input"
+          className="search__input secondary-background text"
           placeholder="Search for a country..."
           onChange={(e) => handleInput(e.target.value)}
         />
         <select
           name="format"
           id="format"
-          className="search-filter__select"
+          className="search-filter__select secondary-background text"
           onChange={(e) => handleClick(e.target.value)}
         >
           <option value="DEFAULT" selected disabled>
