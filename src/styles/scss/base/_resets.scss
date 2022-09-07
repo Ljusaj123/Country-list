@@ -54,3 +54,35 @@ img {
   max-width: 1400px;
   margin: 0 auto;
 }
+
+.light-mode {
+  .main-background {
+    background-color: $very-light-gray__light-mode;
+  }
+  .secondary-background {
+    background-color: $white;
+  }
+
+  .text {
+    color: $very-dark-blue__lignt-mode;
+  }
+
+  .text::placeholder {
+    color: $light-gray__light-mode;
+  }
+}
+.dark-mode {
+  color: $very-light-gray__light-mode;
+
+  .main-background {
+    background-color: $very-dark-blue__dark-mode;
+  }
+  .secondary-background {
+    background-color: $dark-blue__dark-mode;
+  }
+
+  .text,
+  .text::placeholder {
+    color: $white;
+  }
+}
