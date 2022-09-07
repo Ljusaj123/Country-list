@@ -275,6 +275,8 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
+  padding: 0 1em;
 }
 .country-text .name {
   margin-bottom: 1em;
@@ -283,7 +285,10 @@ img {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.5em;
+  gap: 1em;
+}
+.country-text .info span + span {
+  margin-right: 0.5em;
 }
 .country-borders {
   width: 100%;

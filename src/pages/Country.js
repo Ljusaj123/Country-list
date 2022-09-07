@@ -85,19 +85,20 @@ function Country() {
                     <p>
                       <strong>Top Level Domain: </strong>
                       {tld.map((t) => {
-                        return `${t}, `;
+                        return <span>{t}</span>;
                       })}
                     </p>
                     <p>
                       <strong>Currencies: </strong>
+
                       {curren.map((curr) => {
-                        return curr;
+                        return <span>{curr}</span>;
                       })}
                     </p>
                     <p>
                       <strong>Languages: </strong>
                       {lang.map((lag) => {
-                        return `${lag}, `;
+                        return <span>{lag}</span>;
                       })}
                     </p>
                   </div>
