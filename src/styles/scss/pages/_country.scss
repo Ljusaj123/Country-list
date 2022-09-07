@@ -1,0 +1,113 @@
+@use "../base/" as *;
+
+.country {
+  background-color: $very-light-gray__light-mode;
+
+  &__info {
+    @include universal-flex-display(center, flex-start);
+    flex-direction: column;
+    padding: 2em 0;
+    gap: 10em;
+
+    .back-button {
+      padding: 1rem 3rem;
+      border: none;
+      border-radius: 5px;
+      background-color: $very-light-gray__light-mode;
+      box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      align-self: flex-start;
+      justify-self: flex-start;
+      font-size: $fs--placeholder;
+    }
+
+    &-container {
+      display: flex;
+      width: 100%;
+      gap: 3em;
+    }
+
+    &-flag {
+      flex: 1;
+      object-fit: contain;
+
+      & > img {
+        width: 100%;
+      }
+    }
+
+    &-text {
+      flex: 2;
+      @include universal-flex-display(center, center);
+      flex-direction: column;
+      gap: 2em;
+    }
+  }
+
+  &-text {
+    @include universal-flex-display(center, flex-start);
+    flex-direction: column;
+
+    .name {
+      margin-bottom: 1em;
+    }
+
+    .info {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5em;
+    }
+  }
+
+  &-borders {
+    width: 100%;
+    @include universal-flex-display(flex-start, center);
+
+    .border-buttons {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      gap: 1rem;
+
+      button {
+        width: 100%;
+        padding: 0.5rem 0;
+        border: none;
+        border-radius: 5px;
+        background-color: $very-light-gray__light-mode;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@include media-1024 {
+  .country {
+    height: fit-content;
+
+    &__info {
+      gap: 2em;
+      .back-button {
+        margin-bottom: 3rem;
+      }
+      &-container {
+        flex-direction: column;
+      }
+      &-flag {
+        margin-bottom: 3rem;
+        & > img {
+          align-self: center;
+        }
+      }
+    }
+    .country-borders {
+      flex-direction: column;
+
+      .border-buttons {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
