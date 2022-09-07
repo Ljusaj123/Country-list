@@ -13,3 +13,9 @@ $fs--detail: 16px;
 
 $fs--svg: clamp(1rem, calc(2.5vw + 0.5rem), 1.5rem);
 $fs--placeholder: clamp(0.8rem, calc(2vw + 0.4rem), 1rem);
+$fs--h1: clamp(2rem, calc(5.5vw + 1rem), 3rem);
+$fs--h2: clamp(1.6rem, calc(5.5vw + 1rem), 2.6rem);
+$fs--h3: clamp(1.3rem, calc(3.5vw + 1rem), 2rem);
+$fs--p: clamp(0.9rem, calc(2.5vw + 0.5rem), 1.5rem);
+$fs--a: clamp(0.8rem, calc(2.5vw + 0.5rem), 1.1rem);
+$fs--li: clamp(0.9rem, calc(2.5vw + 0.5rem), 1.1rem);
