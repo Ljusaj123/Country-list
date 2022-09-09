@@ -29,20 +29,28 @@ Users should be able to:
 #### Desktop
 
 ![Home-darkmode](./public/home-darkmode.png)
+---
 
 ![Home-lightmode](./public/home-lightmode.png)
+---
 
 ![County-lightmode](./public/country-lightmode.png)
+---
 
 ![County-darkmode](./public/country-darkmode.png)
+
+---
 
 #### Mobile
 
 ![Home-darkmode-mobile](./public/home-darkmode-mobile.png)
+---
 
 ![Home-lightmode-mobile](./public/home-lightmode-mobile.png)
+---
 
 ![County-lightmode-mobile](./public/country-lightmode-mobile.png)
+---
 
 ![County-darkmode-mobile](./public/country-darkmode-mobile.png)
 
