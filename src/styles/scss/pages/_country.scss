@@ -18,6 +18,7 @@
     &-flag {
       flex: 1;
       object-fit: contain;
+      box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.3);
 
       & > img {
         width: 100%;

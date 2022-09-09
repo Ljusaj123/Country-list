@@ -45,8 +45,6 @@ function Country({ mode, setMode }) {
         } = d;
 
         const curren = Object.keys(currencies);
-        console.log(curren);
-
         const lang = Object.values(languages);
 
         return (
